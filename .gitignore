@@ -1,0 +1,22 @@
+# Salesforce local files
+.sf/
+
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Expo
+.expo/
+**/.expo/
+
+# Build output
+dist/
+.next/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
