@@ -1,18 +1,29 @@
-# Laundry Marketplace
+# FreshFold Laundry Marketplace
 
-A hyperlocal laundry-services marketplace connecting customers, laundry partners, and delivery staff. Built as an **incremental project** with React Native (Expo), Next.js, and Supabase.
+A hyperlocal laundry services marketplace for customers, laundry partners, delivery operators and marketplace admins.
 
-## Current development status
+## Working prototype (first milestone)
 
-**Foundation / prototype. Not production-ready.** The mobile app initially uses clearly marked sample partners and local demo orders. Production login, partner verification, geospatial discovery, live logistics, payment collection, and payouts must be implemented and tested before customers use the system.
+Open **[prototype.html](prototype.html)** in your browser (or download the repository and open the file locally). This is a functional single-file sample experience with:
 
-## Product roles
-- **Customer:** discover nearby laundry services, build an itemized cart, select priority and pickup, request service, view order status
-- **Laundry partner:** configure services, availability and prices, accept orders, inspect garments, fulfill jobs
-- **Delivery partner:** manage pickup and drop tasks (later milestone)
-- **Administrator:** review marketplace activity, partner verification and issues
+- Laundry-service selection and nearby-partner listing using fictional Aurangabad demo data
+- Partner distance, ratings, pickup and express filters
+- Garment quantity selection with itemized prices, pickup charge and express surcharge
+- Customer booking (stored locally in that browser)
+- Partner order acceptance and step-by-step fulfillment
+- Admin demo dashboard with orders and sample metrics
 
-## Development
-See [docs/SETUP.md](docs/SETUP.md) and [docs/ROADMAP.md](docs/ROADMAP.md).
+**Important:** This is **not yet** a deployed end-to-end production application. All demo data is local to one browser. There is no real customer login, location lookup, photo upload, payment, partner settlement, or cross-device order synchronization. Do not use it to process real customer data or payments.
 
-Do not commit API keys, payment secrets, service-role keys, or customer photographs.
+## Next implementation stages
+
+1. React Native/Expo app and Next.js admin frontend
+2. Supabase PostgreSQL/PostGIS data model, Auth, RLS and secure backend order functions
+3. Verified partner onboarding and genuine nearby search using routing services
+4. Garment photographs, order confirmation, pickup/drop workflow and realtime updates
+5. Payment verification, invoices, refunds, commissions, payouts
+6. Testing, monitoring, deployment and controlled partner/customer pilot
+
+For the fuller multi-file browser demo and draft database migration, use the downloadable project bundle from our ChatGPT project conversation, then import the tested files into this repository.
+
+Do **not** commit authentication secrets, service-role keys, payment API keys, or customer photographs.
