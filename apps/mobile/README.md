@@ -25,6 +25,14 @@ In the output, you'll find options to open the app in a
 
 You can start developing by editing the files inside the **src/app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
+## Verify the Supabase connection on Android
+
+1. In `apps/mobile`, copy `.env.example` to `.env` if needed. Set the HTTPS project URL and the publishable key from the Supabase Connect dialog. Expo includes `EXPO_PUBLIC_*` values in its client bundle, so use only public configuration in these variables.
+2. Run `npx expo start --go` from `apps/mobile`. Open the project in Expo Go on a phone that can reach the development machine. Restart Expo after changing the environment variables.
+3. Open **Explore** and tap **Check connection**. A successful response confirms the phone can reach `/auth/v1/health`. If it fails, check the displayed status for configuration, network, or project errors and retry. The check is available in development builds and verifies Auth endpoint reachability only.
+
+Feature code can call `getSupabaseClient()` to reuse the typed client. Native sessions persist in AsyncStorage, and token refresh follows the app foreground state.
+
 ## Get a fresh project
 
 When you're ready, run:
