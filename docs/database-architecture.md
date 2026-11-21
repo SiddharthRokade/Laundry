@@ -1,6 +1,7 @@
 # Laundry Marketplace: Database Architecture (Design Draft)
 
-**Status:** Review draft. No migration has been applied to Supabase.  
+**Status:** Review draft. Singapore test has applied the [customer profile and role migration](../supabase/migrations/20261121130833_customer_profiles_and_roles.sql). Mumbai deployment is pending.
+
 **Target:** Supabase PostgreSQL 17, project `laundry-marketplace-india` (Mumbai, `ap-south-1`).  
 **Product:** Multi-partner hyperlocal services marketplace, not a single laundry storefront.
 
